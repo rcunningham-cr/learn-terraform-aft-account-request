@@ -2,10 +2,10 @@ module "sandbox" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "<ACCOUNT EMAIL>"
+    AccountEmail              = "me+sandboxtest@richcunningham.uk"
     AccountName               = "sandbox-aft"
-    ManagedOrganizationalUnit = "Learn AFT"
-    SSOUserEmail              = "<SSO EMAIL>"
+    ManagedOrganizationalUnit = "Sandbox"
+    SSOUserEmail              = "rich@cunningham.sh"
     SSOUserFirstName          = "Sandbox"
     SSOUserLastName           = "AFT"
   }
@@ -20,7 +20,8 @@ module "sandbox" {
   }
 
   custom_fields = {
-    group = "non-prod"
+    vpc_name = "test"
+    vpc_cidr = "192.168.69.0/24"
   }
 
   account_customizations_name = "sandbox"
